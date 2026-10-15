@@ -1,0 +1,35 @@
+# Build output
+cube
+*.o
+*.dSYM/
+
+# Autotools generated
+autom4te.cache/
+build-aux/
+aclocal.m4
+configure
+Makefile.in
+Makefile
+config.status
+config.log
+.deps/
+.dirstamp
+stamp-h*
+
+# Editor backup / swap files
+*~
+*.swp
+*.swo
+\#*\#
+.*.kate-swp
+
+# Font files (proprietary, not distributable)
+*.ttf
+
+# Xcode build output
+screensaver/build/
+xcuserdata/
+*.xcworkspace/
+
+# macOS
+.DS_Store

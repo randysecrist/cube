@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000001 /* SoFICubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000001; };
+		A1000002 /* mesh.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000003; };
+		A1000003 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000004; };
+		A1000004 /* logo.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000005; };
+		A1000005 /* font.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000006; };
+		A1000006 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2000010; };
+		A1000007 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2000011; };
+		A1000008 /* sofi.png in Resources */ = {isa = PBXBuildFile; fileRef = A2000012; };
+		A1000009 /* larsseit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2000013; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000001 /* SoFICubeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoFICubeView.m; sourceTree = "<group>"; };
+		A2000002 /* SoFICubeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoFICubeView.h; sourceTree = "<group>"; };
+		A2000003 /* mesh.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = mesh.c; path = ../src/mesh.c; sourceTree = "<group>"; };
+		A2000004 /* render.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = render.c; path = ../src/render.c; sourceTree = "<group>"; };
+		A2000005 /* logo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = logo.c; path = ../src/logo.c; sourceTree = "<group>"; };
+		A2000006 /* font.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = font.c; path = ../src/font.c; sourceTree = "<group>"; };
+		A2000007 /* cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cube.h; path = ../src/cube.h; sourceTree = "<group>"; };
+		A2000008 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = ../stb_image.h; sourceTree = "<group>"; };
+		A2000009 /* stb_truetype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = stb_truetype.h; path = ../stb_truetype.h; sourceTree = "<group>"; };
+		A200000A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A200000B /* SoFICube.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoFICube.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000010 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		A2000011 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		A2000012 /* sofi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sofi.png; sourceTree = "<group>"; };
+		A2000013 /* larsseit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = larsseit.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000006 /* ScreenSaver.framework in Frameworks */,
+				A1000007 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4000001 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				A4000002 /* Source */,
+				A4000003 /* CubeCore */,
+				A4000004 /* Frameworks */,
+				A4000005 /* Resources */,
+				A4000006 /* Products */,
+				A200000A /* Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		A4000002 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A2000002 /* SoFICubeView.h */,
+				A2000001 /* SoFICubeView.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		A4000003 /* CubeCore */ = {
+			isa = PBXGroup;
+			children = (
+				A2000007 /* cube.h */,
+				A2000003 /* mesh.c */,
+				A2000004 /* render.c */,
+				A2000005 /* logo.c */,
+				A2000006 /* font.c */,
+				A2000008 /* stb_image.h */,
+				A2000009 /* stb_truetype.h */,
+			);
+			name = CubeCore;
+			sourceTree = "<group>";
+		};
+		A4000004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2000010 /* ScreenSaver.framework */,
+				A2000011 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4000005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2000012 /* sofi.png */,
+				A2000013 /* larsseit.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4000006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A200000B /* SoFICube.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5000001 /* SoFICube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7000003 /* Build configuration list for PBXNativeTarget "SoFICube" */;
+			buildPhases = (
+				A6000001 /* Sources */,
+				A3000001 /* Frameworks */,
+				A6000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoFICube;
+			productName = SoFICube;
+			productReference = A200000B /* SoFICube.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A7000001 /* Build configuration list for PBXProject "SoFICube" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4000001 /* root */;
+			productRefGroup = A4000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5000001 /* SoFICube */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000008 /* sofi.png in Resources */,
+				A1000009 /* larsseit.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001 /* SoFICubeView.m in Sources */,
+				A1000002 /* mesh.c in Sources */,
+				A1000003 /* render.c in Sources */,
+				A1000004 /* logo.c in Sources */,
+				A1000005 /* font.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_IN_ASSET_CATALOG = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A9000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_IN_ASSET_CATALOG = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A9000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SCREENSAVER_BUILD=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+					"$(SRCROOT)/../src/",
+				);
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rsecrist.SoFICube;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		A9000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SCREENSAVER_BUILD=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../",
+					"$(SRCROOT)/../src/",
+				);
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rsecrist.SoFICube;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7000001 /* Build configuration list for PBXProject "SoFICube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9000001 /* Debug */,
+				A9000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7000003 /* Build configuration list for PBXNativeTarget "SoFICube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9000003 /* Debug */,
+				A9000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A8000001 /* Project object */;
+}
