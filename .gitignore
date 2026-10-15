@@ -1,5 +1,6 @@
 # Build output
 cube
+cube.exe
 *.o
 *.dSYM/
 

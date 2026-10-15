@@ -1,0 +1,2 @@
+# autogen.sh and configure are run by bash; a CRLF checkout breaks them.
+* text=auto eol=lf
