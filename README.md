@@ -69,6 +69,44 @@ cp -R screensaver/build/Release/SoFICube.saver ~/Library/Screen\ Savers/
 
 Then open **System Settings > Screen Saver** and select **SoFICube**.
 
+## Windows Screen Saver
+
+The same shared rendering modules build a native `.scr`, with
+`src/win32_scr.c` replacing `main.c` as the entry point. It drives WGL
+directly rather than GLUT, so the resulting binary depends only on system
+DLLs and can be copied anywhere.
+
+### Building
+
+`configure` enables this target automatically on a MinGW-w64 host, so the
+standard build produces it alongside `cube.exe`:
+
+```sh
+./autogen.sh
+./configure
+make            # builds both cube.exe and cube.scr
+```
+
+### Installing
+
+Copy `cube.scr` and `sofi.png` into the same directory, then right-click
+`cube.scr` and choose **Install**, or copy both to `C:\Windows\System32`.
+Select **cube** under **Settings > Personalization > Lock screen > Screen
+saver**.
+
+The screen saver responds to the standard flags: `/s` runs full screen,
+`/p <hwnd>` renders into the settings preview pane, and `/c` reports that
+there are no configurable options. Any key or mouse movement exits.
+
+### Assets
+
+Windows launches a `.scr` from `System32`, so assets are resolved relative
+to the executable rather than the working directory: first
+`screensaver\Resources\` beside the binary (the build tree layout), then
+flat alongside it. Because `larsseit.ttf` is not distributable and this
+build has no GLUT bitmap-font fallback, the stats overlay falls back to a
+stock Windows face so it stays visible.
+
 ## Stats overlay
 
 The upper-left corner displays:
@@ -92,7 +130,8 @@ The upper-left corner displays:
 │   ├── mesh.c          # rounded-cube geometry generation
 │   ├── render.c        # drawing, stats tracking, and overlay
 │   ├── logo.c          # texture loading for the SoFi logo
-│   └── font.c          # bitmap font rendering via stb_truetype
+│   ├── font.c          # bitmap font rendering via stb_truetype
+│   └── win32_scr.c     # Windows .scr entry point (WGL, no GLUT)
 ├── screensaver/
 │   ├── SoFICube.xcodeproj/   # Xcode project for the .saver bundle
 │   ├── SoFICubeView.h        # ScreenSaverView subclass (header)

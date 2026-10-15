@@ -12,7 +12,9 @@
 #  include <windows.h>
 #  include <GL/gl.h>
 #  include <GL/glu.h>
-#  include <GL/glut.h>
+#  ifndef SCREENSAVER_BUILD
+#    include <GL/glut.h>
+#  endif
 /* Windows ships only the OpenGL 1.1 headers; this enum arrived in 1.2. */
 #  ifndef GL_CLAMP_TO_EDGE
 #    define GL_CLAMP_TO_EDGE 0x812F

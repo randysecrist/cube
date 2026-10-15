@@ -12,14 +12,19 @@ AC_CANONICAL_HOST
 
 GL_CFLAGS=""
 GL_LIBS=""
+SCR_LIBS=""
+build_win32_scr=no
 
 case "$host_os" in
-    darwin*)
-        GL_LIBS="-framework OpenGL -framework GLUT"
-        ;;
-    mingw*|msys*|cygwin*)
-        GL_LIBS="-lopengl32 -lglu32 -lfreeglut"
-        ;;
+ darwin*)
+ GL_LIBS="-framework OpenGL -framework GLUT"
+ ;;
+ mingw*|msys*|cygwin*)
+ GL_LIBS="-lopengl32 -lglu32 -lfreeglut"
+ # The .scr drives WGL directly, so it needs no GLUT.
+ SCR_LIBS="-lopengl32 -lglu32 -lgdi32 -luser32"
+ build_win32_scr=yes
+ ;;
     *)
         # Linux / BSD / generic Unix
         AC_CHECK_LIB([m],    [cos],  [], [AC_MSG_ERROR([libm not found])])
@@ -32,6 +37,8 @@ esac
 
 AC_SUBST([GL_CFLAGS])
 AC_SUBST([GL_LIBS])
+AC_SUBST([SCR_LIBS])
+AM_CONDITIONAL([BUILD_WIN32_SCR], [test "x$build_win32_scr" = xyes])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
